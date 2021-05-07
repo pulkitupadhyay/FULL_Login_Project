@@ -106,7 +106,7 @@ app.get('/suggetions',  (req,res,next)=>{
 app.get('/', (req,res,next)=>{
 
     // console.log(req.body)
-    res.sendFile(path.join(__dirname,'../','new-git-repo', 'views','surveyForm.html'))
+    res.sendFile(path.join(__dirname,'new-git-repo', 'views','surveyForm.html'))
 
 })
 
