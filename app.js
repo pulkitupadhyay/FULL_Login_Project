@@ -79,7 +79,7 @@ app.get('/user/contactUus', (req,res,next)=>{
     res.sendFile(path.join(__dirname, 'views','contactUus.html'))
 
 })
-app.get('/suggetions',  (req,res,next)=>{
+app.get('/suggations',  (req,res,next)=>{
 
     res.sendFile(path.join(__dirname, 'views','suggetions.html'));
     
