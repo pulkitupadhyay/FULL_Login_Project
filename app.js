@@ -79,6 +79,11 @@ app.get('/user/contactUus', (req,res,next)=>{
     res.sendFile(path.join(__dirname, 'views','contactUus.html'))
 
 })
+app.get('/suggetions',  (req,res,next)=>{
+
+    res.sendFile(path.join(__dirname, 'views','suggetions.html'));
+    
+    })
 app.get('/HomePage',  (req,res,next)=>{
 
     // console.log(req.body)
@@ -98,11 +103,7 @@ app.get('/ourworks',  (req,res,next)=>{
     res.sendFile(path.join(__dirname, 'views','ourWorks.html'))
 
 })
-app.get('/suggetions',  (req,res,next)=>{
 
-    res.sendFile(path.join(__dirname, 'views','suggetions.html'))
-    
-    })
 app.get('/', (req,res,next)=>{
 
     // console.log(req.body)
