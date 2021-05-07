@@ -76,31 +76,31 @@ const Suggetion = mongoose.model( 'Suggetion', suggetionSchema);
 
 app.get('/user/contactUus', (req,res,next)=>{
 
-    res.sendFile(path.join(__dirname,'../','new-git-repo', 'views','contactUus.html'))
+    res.sendFile(path.join(__dirname, 'views','contactUus.html'))
 
 })
 app.get('/HomePage',  (req,res,next)=>{
 
     // console.log(req.body)
-    res.sendFile(path.join(__dirname,'../','new-git-repo', 'views','HomePage.html'))
+    res.sendFile(path.join(__dirname, 'views','HomePage.html'))
 
 })
 app.get('/NGOs',  (req,res,next)=>{
 
     // console.log(req.body)
-    res.sendFile(path.join(__dirname,'../','new-git-repo', 'views','NGO.html'))
+    res.sendFile(path.join(__dirname, 'views','NGO.html'))
 
 })
 
 app.get('/ourworks',  (req,res,next)=>{
 
     // console.log(req.body)
-    res.sendFile(path.join(__dirname,'../','new-git-repo', 'views','ourWorks.html'))
+    res.sendFile(path.join(__dirname, 'views','ourWorks.html'))
 
 })
 app.get('/suggetions',  (req,res,next)=>{
 
-    res.sendFile(path.join(__dirname,'../','new-git-repo', 'views','suggetions.html'))
+    res.sendFile(path.join(__dirname, 'views','suggetions.html'))
     
     })
 app.get('/', (req,res,next)=>{
@@ -114,7 +114,7 @@ app.post('/HomePage', function(req,res,next){
 
     let Name = req.body.name;
     let suggetion2= req.body.suggetion;
-res.sendFile(path.join(__dirname,'../','new-git-repo', 'views','HomePage.html'))
+res.sendFile(path.join(__dirname, 'views','HomePage.html'))
         const suggetion1 = new Suggetion({
             Name: Name,
             suggetion: suggetion2
@@ -135,7 +135,7 @@ app.post('/HomePage', function(req, res,next) {
  que3 = req.body.que3;
  que4 = req.body.que4;
  que5 = req.body.que5;
-res.sendFile(path.join(__dirname,'../','new-git-repo', 'views','HomePage.html'))
+res.sendFile(path.join(__dirname, 'views','HomePage.html'))
 const testSurvey = new Survey({
     name: NAME,
     email: EMAIL,
