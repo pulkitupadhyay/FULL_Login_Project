@@ -274,6 +274,18 @@ app.get('/suggetions', protect, (req,res,next)=>{
       // console.log(req.headers)
   })
 
+  app.get('/survey', protect, (req,res,next)=>{
+    jwt.verify(req.cookies.Token,'mynameispulkitupadhyayfromharda',(err, authData)=>{
+        if(err){
+            res.sendStatus(403)
+        }else{
+          res.render('surveyForm.hbs')
+        }
+    })
+      
+      // console.log(req.headers)
+  })
+
 app.get('/HomePage', protect, (req,res,next)=>{
     jwt.verify(req.cookies.Token,'mynameispulkitupadhyayfromharda',(err, authData)=>{
         if(err){
@@ -312,14 +324,11 @@ app.get('/ourworks', protect, (req,res,next)=>{
   })
 
 
-app.get('/', protect, (req,res,next)=>{
-    jwt.verify(req.cookies.Token,'mynameispulkitupadhyayfromharda',(err, authData)=>{
-        if(err){
-            res.sendStatus(403)
-        }else{
-          res.render('surveyForm.hbs')
-        }
-    })
+app.get('/',  (req,res,next)=>{
+        
+    res.render('login.hbs')
+        
+
       
       // console.log(req.headers)
   })
